@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>体重趋势图交互 Demo</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="fidelity.css">
+</head>
+<body>
+<aside class="demo-controls" aria-label="Demo 数据模式"><strong>体重趋势图</strong><div><button data-mode="dense" aria-pressed="false">一年数据充足</button><button data-mode="sparse" aria-pressed="true">一年数据不足</button></div><p>点击或按住图表左右滑动查看记录。<br>空档按相邻真实记录的中点切换。</p><output id="selection-status" aria-live="polite"></output></aside>
+<main class="phone" aria-label="体重页面">
+<header><div class="status"><span>9:41</span><div class="status-icons"><img src="assets/images/CellularConnection0.svg" alt=""><img src="assets/images/Wifi0.svg" alt=""><span class="battery"></span></div></div><div class="navigation"><span class="back" aria-hidden="true"></span><h1>体重</h1><span class="records">所有记录</span></div></header>
+<div class="range"><div><span>近30天</span><span>近半年</span><span class="active">近1年</span><span>全部</span></div></div>
+<section class="weight-card" aria-labelledby="chart-title">
+<h2 id="chart-title"><span class="trend-icon"><img src="assets/images/Frame_138_37614.svg" alt=""></span>体重趋势</h2>
+<p class="date-range">2025年7月1日-2026年6月30日</p>
+<div class="selected-card" id="selected-card"><div><strong id="weight">44.6</strong><span>公斤</span></div><time id="date">今天</time></div>
+<svg id="chart" viewBox="0 0 351 201" role="slider" tabindex="0" aria-label="体重记录，左右方向键切换记录" aria-valuetext="今天 44.6公斤" aria-valuemin="0" aria-valuemax="6" aria-valuenow="6"><defs><clipPath id="plot-clip"><rect x="42" y="0" width="286" height="162"/></clipPath></defs><g id="grid"></g><g id="axes"></g><g clip-path="url(#plot-clip)"><path id="weight-line" transform="translate(42 51)" fill="none" stroke="#00cc99" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></path></g><g id="extrema"></g><line id="selection-line" y1="0" y2="160" stroke="#00cc99" stroke-width="1" opacity=".8"></line><circle id="selection-dot" r="6" fill="white" stroke="#00cc99" stroke-width="4"></circle><rect x="34" y="0" width="305" height="194" fill="transparent"/></svg>
+<div class="legend"><span><i></i>体重</span><span><img src="assets/images/trend-legend@3x.png" alt="">趋势</span></div>
+<div class="statistics"><div><span>体重记录</span><p><strong>132</strong><small>次</small></p></div><div><span>平均体重</span><p><strong>46.3</strong><small>公斤</small></p></div><div><span>比1年零5天前</span><p><strong id="comparison">−2.4</strong><small>公斤</small></p></div></div>
+</section><div class="home-indicator"></div>
+</main><script type="module" src="app.js"></script>
+</body></html>

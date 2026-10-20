@@ -1,0 +1,3 @@
+// Exact path data exported by Pixso. Curves are never reconstructed from rounded record values.
+export async function loadCurve(mode){const name=mode==='sparse'?'Vector_138_37405.svg':'Vector_138_37226.svg';const response=await fetch(`assets/images/${name}`);if(!response.ok)throw new Error('无法读取 Pixso 曲线');const doc=new DOMParser().parseFromString(await response.text(),'image/svg+xml');return doc.querySelector('path').getAttribute('d');}
+export function pointOnCurve(path,x){const localX=x-42;let lo=0,hi=path.getTotalLength();for(let i=0;i<30;i++){const mid=(lo+hi)/2;if(path.getPointAtLength(mid).x<localX)lo=mid;else hi=mid;}const point=path.getPointAtLength((lo+hi)/2);return{x:point.x+42,y:point.y+51};}

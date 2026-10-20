@@ -1,0 +1,11 @@
+@font-face{font-family:"Pixso PingFang";src:local("PingFangSC-Regular");font-weight:400;font-style:normal}
+@font-face{font-family:"Pixso PingFang";src:local("PingFangSC-Medium");font-weight:500;font-style:normal}
+@font-face{font-family:"Pixso PingFang";src:local("PingFangSC-Semibold");font-weight:600;font-style:normal}
+html,body{font-family:"Pixso PingFang","PingFang SC",sans-serif;font-weight:400;font-synthesis:none}
+.statistics strong{font-size:23px;letter-spacing:0;font-weight:500}
+.legend{gap:8px;height:16px;top:338px;line-height:16px}
+.legend>span{width:36px;height:16px;gap:2px;flex:none}
+.legend>span:first-child i{width:10px;height:10px;margin:1px;flex:none}
+.legend img{width:12px;height:12px;object-fit:contain;flex:none}
+.legend>span:nth-child(2){gap:0}
+#chart:focus:not(:focus-visible){outline:none}
